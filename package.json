@@ -1,0 +1,10 @@
+{
+  "name": "def-core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "JRBlockkop",
+  "description": "Core build and run scripts"
+}
