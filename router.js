@@ -1,13 +1,20 @@
 const fs = require('fs')
+const { spawn } = require('child_process');
 
 const routesfile = fs.readFileSync('./routes.yaml').toString()
 
 function router(pathname,req,res){
-    let page;
+    const pager = spawn(
+        "node",
+        [
+            "core/pager",
+            "error.js" //todo make dynamic
+        ]
+    )
 
-    page='<h1>Hello World</h1>' //example needs implementation
-
-    res.end(page)
+    pager.stdout.on('data',(data)=>{
+        res.end(data.toString())
+    })
 }
 
 module.exports = router
