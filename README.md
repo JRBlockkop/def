@@ -5,3 +5,7 @@ Def is a Javascript server page router
 # Installation
 
 * [Quick Setup](https://github.com/JRBlockkop/def/wiki/Quick-Setup)
+
+# Tutorials
+
+* [Tutorials](https://github.com/JRBlockkop/def/wiki/)
