@@ -3,6 +3,15 @@ const { spawn } = require('child_process');
 
 const routesfile = fs.readFileSync('./routes.yaml').toString()
 
+const routes = new Map()
+
+routesfile.split('\n').forEach(v=>{
+    routes.set(
+        str.split(':')[0],
+        str.split(':')[1].trim()
+    )
+})
+
 function router(pathname,req,res){
     fs.writeFileSync('./core/req.json',JSON.stringify(req))
     const pager = spawn(
@@ -20,3 +29,4 @@ function router(pathname,req,res){
 
 
 module.exports = router
+
